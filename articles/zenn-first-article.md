@@ -1,6 +1,6 @@
 ---
 title: "test title"
-emoji: "��"
+emoji: "✌"
 type: "tech"
 topics: ["docker", "docker-compose", "rails"]
 published: true
