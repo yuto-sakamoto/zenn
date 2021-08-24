@@ -40,7 +40,7 @@ published: true
 
 ## Dockerfileの編集
 
-```Dockerfile
+```Dockerfile:Dockerfile
 FROM ruby:2.6.5 ← ご自身のRubyのバージョンに合わせてください
 RUN apt-get update -qq && \
   apt-get install -y build-essential \
@@ -73,8 +73,7 @@ Railsプロジェクトのルートフォルダに移動
 
 ## docker-compose.ymlファイルの編集
 
-```docker-compose.yml
-
+```yml:docker-compose.yml
 version: "3.8"
 services:
   app:
