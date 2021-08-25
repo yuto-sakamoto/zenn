@@ -25,7 +25,7 @@ published: true
 ![](https://storage.googleapis.com/zenn-user-upload/8b089d1899b95f51e3230736.png)  
 バージョンは違っていてもエラーが出ていなければ大丈夫です!!  
 
-  3. `docker run --rm hello-world`を実行後、下図のように実行できればdockerの準備は完了です!!  
+  3. `docker run --rm hello-world`を実行後、下図のように実行できればdockerの準備はOKです!!  
 ![](https://storage.googleapis.com/zenn-user-upload/d478dbc78390b08bb581be8b.png)
 
 # docker環境の構築
@@ -90,7 +90,8 @@ services:
     depends_on:
       - db
     volumes:
-      - .:/r_pictgram
+      - .:/example
+      - tmp-data:/example/tmp
     ports:
       - "3001:3000"
   db:
@@ -104,6 +105,7 @@ services:
 
 volumes:
   mysql-data:
+  tmp-data:
 ```
 
 ## database.yml修正
