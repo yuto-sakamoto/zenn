@@ -1,5 +1,5 @@
 ---
-title: "docker + docker-compose + railsでさくっと環境構築できるようになる"
+title: "たった10分でdocker + docker-compose + railsの環境構築!!"
 emoji: "✌️"
 type: "tech"
 topics: ["docker", "docker-compose", "rails"]
