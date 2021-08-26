@@ -30,7 +30,7 @@ published: true
 
 # docker環境の構築
 
-まずは、Railsプロジェクトがルートフォルダに移動する。  
+まずは、Railsプロジェクトがルートフォルダに移動する。(ご自身の環境に合わせてください)  
 `cd hoge/fuga`
 
 ## Dockerfileの作成
@@ -58,16 +58,16 @@ USER example_user
 WORKDIR $APP_ROOT
 
 # Add Gemfile
-COPY Gemfile* .
+COPY Gemfile* ./
 
 # Install Gemfile's bundle
 RUN bundle install
-COPY . .
+COPY . ./
 ```
 
 # docker-compose環境の構築
 
-Railsプロジェクトのルートフォルダに移動する。  
+Railsプロジェクトのルートフォルダに移動する。(ご自身の環境に合わせてください)  
 `cd hoge/fuga`
 
 ## docker-compose.ymlの作成
