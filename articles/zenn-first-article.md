@@ -52,8 +52,6 @@ RUN apt-get update -qq && \
 # ご自身のアプリ名にすると良い(任意)
 ENV APP_ROOT /example
 
-USER example_user
-
 # Set working directory as APP_ROOT
 WORKDIR $APP_ROOT
 
