@@ -45,12 +45,18 @@ published: true
 # ご自身のRubyのバージョンに合わせてください
 FROM ruby:2.6.5
 RUN apt-get update -qq && \
-  apt-get install -y build-essential \
-  libpq-dev \
-  nodejs
+  apt-get install  -y --no-install-recommends \
+  build-essential \
+  default-mysql-client \
+  less \
+  nodejs \
+  && apt-get clean \
+  && rm -rf /var/lib/apt/lists/*
 
 # ご自身のアプリ名にすると良い(任意)
 ENV APP_ROOT /example
+
+USER example_user
 
 # Set working directory as APP_ROOT
 WORKDIR $APP_ROOT
@@ -61,6 +67,7 @@ COPY Gemfile* ./
 # Install Gemfile's bundle
 RUN bundle install
 COPY . ./
+EXPOSE 3001
 ```
 
 # docker-compose環境の構築
