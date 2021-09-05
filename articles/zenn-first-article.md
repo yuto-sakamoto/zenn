@@ -89,7 +89,7 @@ services:
     build:
       context: .
       dockerfile: ./docker/rails/Dockerfile
-    command: rails s -b 0.0.0.0
+    command: bash -c "rm -f tmp/pids/server.pid && rails s -b 0.0.0.0"
     tty: true
     stdin_open: true
     depends_on:
